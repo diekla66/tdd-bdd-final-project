@@ -43,6 +43,7 @@ db = SQLAlchemy()
 def init_db(app):
     """Initialize the SQLAlchemy app"""
     Product.init_db(app)
+    logger.setLevel(logging.INFO)
 
 
 class DataValidationError(Exception):
