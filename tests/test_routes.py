@@ -198,6 +198,7 @@ class TestProductRoutes(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         updated_product = response.get_json()
         self.assertEqual(updated_product["description"], "unknown")
+        # may be bad path here
 
     def test_delete_product(self):
         """It should Delete a Product"""
